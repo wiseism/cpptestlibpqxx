@@ -3,3 +3,4 @@
 
 requirements:
   - "libpqxx/7.3.2"
+  - "libmysqlclient/8.1.0"
