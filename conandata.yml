@@ -1,6 +1,3 @@
-# This file is managed by Conan, contents will be overwritten.
-# To keep your changes, remove these comment lines, but the plugin won't be able to modify your requirements
-
 requirements:
-  - "libpqxx/7.3.2"
+  - "libpqxx/7.9.2"
   - "libmysqlclient/8.1.0"

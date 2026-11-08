@@ -29,12 +29,14 @@ jobs:
           choco install python -y
           echo "cmake version"
           cmake --version
-          pip3 install conan==2.0.16
+          pip3 install -U conan
           conan profile detect
           echo "conan2 profiles"
           cat ~/.conan2/profiles/default
           sed -i 's/Release/Debug/g' ~/.conan2/profiles/default
           sed -i 's/14/17/g' ~/.conan2/profiles/default
+          echo "[conf]" >> ~/.conan2/profiles/default
+          echo "tools.microsoft:msvc_toolset_version=14.44" >> ~/.conan2/profiles/default
           echo "conan2 profiles"
           cat ~/.conan2/profiles/default
 
