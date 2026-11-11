@@ -34,7 +34,7 @@ jobs:
           echo "conan2 profiles"
           cat ~/.conan2/profiles/default
           sed -i 's/Release/Debug/g' ~/.conan2/profiles/default
-          sed -i 's/14/17/g' ~/.conan2/profiles/default
+          sed -i 's/14/20/g' ~/.conan2/profiles/default
           echo "[conf]" >> ~/.conan2/profiles/default
           echo "conan2 profiles"
           cat ~/.conan2/profiles/default

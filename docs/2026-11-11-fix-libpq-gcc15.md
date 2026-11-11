@@ -19,3 +19,6 @@
 |---|---|
 | 42444053205 (修复前) | failure — libpq 15.4 GCC15 编译失败 |
 | 待 re-run | 待填 |
+
+## 补记: libpqxx 8.0.2 需 C++20
+- profile cppstd gnu17→gnu20 (ubuntu/win/mac 三个 workflow)，CMakeLists CXX_STANDARD 20。
