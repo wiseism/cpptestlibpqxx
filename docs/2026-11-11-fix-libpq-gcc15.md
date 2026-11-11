@@ -26,3 +26,6 @@
 ## 补记: 直接链接 libpq::pq 目标缺失
 - libpq 17.11 (meson recipe) 的 CMakeDeps 未生成 libpq::pgport/pgcommon/pq 目标；
   libpqxx::pqxx 已传递依赖 libpq，改为仅链接 libpqxx::pqxx。
+
+## 补记: conan 2.34 preset 命名
+- 三个 workflow 的 conan-debug→conan-default。
