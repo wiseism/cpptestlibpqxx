@@ -22,3 +22,7 @@
 
 ## 补记: libpqxx 8.0.2 需 C++20
 - profile cppstd gnu17→gnu20 (ubuntu/win/mac 三个 workflow)，CMakeLists CXX_STANDARD 20。
+
+## 补记: 直接链接 libpq::pq 目标缺失
+- libpq 17.11 (meson recipe) 的 CMakeDeps 未生成 libpq::pgport/pgcommon/pq 目标；
+  libpqxx::pqxx 已传递依赖 libpq，改为仅链接 libpqxx::pqxx。
