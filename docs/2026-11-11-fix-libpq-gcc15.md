@@ -29,3 +29,6 @@
 
 ## 补记: conan 2.34 preset 命名
 - 三个 workflow 的 conan-debug→conan-default。
+
+## 补记: conan 2.34 布局变化
+- 构建目录 build/Debug→build，三个 workflow 修正。

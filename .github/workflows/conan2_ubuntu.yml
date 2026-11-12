@@ -53,4 +53,4 @@ jobs:
           #        cd ..
           conan install . --build=missing -pr=default
           cmake --preset conan-default
-          cmake --build ${{github.workspace}}/build/Debug --config ${{env.BUILD_TYPE}}  -j 2
+          cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}  -j 2
