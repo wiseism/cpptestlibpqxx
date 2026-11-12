@@ -18,7 +18,9 @@
 | Run | 结果 |
 |---|---|
 | 42444053205 (修复前) | failure — libpq 15.4 GCC15 编译失败 |
-| 待 re-run | 待填 |
+| 43215798931 (conan2(ubuntu), 0022402) | ✅ success |
+| 43215799089 (conan2 macos latest) | ✅ success |
+| 43215799591 (conan2 win 2022) | ✅ success |
 
 ## 补记: libpqxx 8.0.2 需 C++20
 - profile cppstd gnu17→gnu20 (ubuntu/win/mac 三个 workflow)，CMakeLists CXX_STANDARD 20。
