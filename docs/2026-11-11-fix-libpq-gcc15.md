@@ -32,3 +32,6 @@
 
 ## 补记: conan 2.34 布局变化
 - 构建目录 build/Debug→build，三个 workflow 修正。
+
+## 补记: preset 命名不稳定
+- 改用 conan_toolchain.cmake 直接 configure。
