@@ -43,5 +43,5 @@ jobs:
         run: |
           conan profile list
           conan install . --build=missing -pr=default
-          cmake -B build -DCMAKE_TOOLCHAIN_FILE=build/generators/conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Debug
-          cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}  -j 2
+          conan build .
+          

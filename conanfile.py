@@ -2,7 +2,7 @@
 # To keep your changes, remove these comment lines, but the plugin won't be able to modify your requirements
 
 from conan import ConanFile
-from conan.tools.cmake import cmake_layout, CMakeToolchain
+from conan.tools.cmake import cmake_layout, CMakeToolchain, CMake
 
 class ConanApplication(ConanFile):
     package_type = "application"
@@ -16,6 +16,11 @@ class ConanApplication(ConanFile):
         tc = CMakeToolchain(self)
         # tc.user_presets_path = False
         tc.generate()
+
+    def build(self):
+        cmake = CMake(self)
+        cmake.configure()
+        cmake.build()
 
     def requirements(self):
         requirements = self.conan_data.get('requirements', [])

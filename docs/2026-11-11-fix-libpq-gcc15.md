@@ -35,3 +35,6 @@
 
 ## 补记: preset 命名不稳定
 - 改用 conan_toolchain.cmake 直接 configure。
+
+## 补记: 改用 conan build
+- conanfile 增加 build()，workflow 统一 conan install + conan build。
