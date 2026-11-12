@@ -1,4 +1,5 @@
 #include <mysql.h>
+#include <cstdio>
 #include <iostream>
 
 int main() {
@@ -16,16 +17,17 @@ int main() {
     }
 
     // 准备SQL语句
-    const char* query = "INSERT INTO articles (id, title, content) VALUES (%d, '%s', '%s') "
-                        "ON DUPLICATE KEY UPDATE title=VALUES(title), content=VALUES(content)";
-
-    // 替换下面的占位符为实际的值
+    char query[512];
     int id = 1;
     const char* title = "Example Title";
     const char* content = "Example Content";
+    std::snprintf(query, sizeof(query),
+                  "INSERT INTO articles (id, title, content) VALUES (%d, '%s', '%s') "
+                  "ON DUPLICATE KEY UPDATE title=VALUES(title), content=VALUES(content)",
+                  id, title, content);
 
     // 执行SQL语句
-    if (mysql_query(conn, query, id, title, content)) {
+    if (mysql_query(conn, query)) {
         std::cerr << "Error executing query: " << mysql_error(conn) << std::endl;
         mysql_close(conn);
         return 1;

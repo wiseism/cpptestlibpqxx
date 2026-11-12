@@ -41,3 +41,6 @@
 
 ## 补记: libpqxx 8 API 变更
 - txn.exec() 不再隐式转换到 pqxx::row，pg_brief.cpp 改用 exec1()。
+
+## 补记: mysql_query 参数错误
+- mysql_main.cpp 误把 mysql_query 当预处理用（5 参数）；改为 snprintf 格式化后 2 参数调用。
