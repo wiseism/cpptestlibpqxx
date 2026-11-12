@@ -17,7 +17,7 @@ int main(int, char *argv[])
     // row, instead of a full result set.
     // As of libpqxx 7.x, you'd just use query_value<int>() for
     // this simple case.
-    pqxx::row r = txn.exec(
+    pqxx::row r = txn.exec1(
             "SELECT id "
             "FROM user_tbl "
             "WHERE name =" + txn.quote(argv[1]));

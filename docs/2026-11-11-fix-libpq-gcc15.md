@@ -38,3 +38,6 @@
 
 ## 补记: 改用 conan build
 - conanfile 增加 build()，workflow 统一 conan install + conan build。
+
+## 补记: libpqxx 8 API 变更
+- txn.exec() 不再隐式转换到 pqxx::row，pg_brief.cpp 改用 exec1()。
