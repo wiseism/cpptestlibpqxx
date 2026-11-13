@@ -42,4 +42,4 @@ CMake Error at cmake/config.cmake:45 (cmake_determine_compile_features):
 ## 验证
 | run id | 结果 |
 | --- | --- |
-| 本次推送触发 | 待填 |
+| 43222068745 (win) / 43222068720 (macos) | ✅ success |
